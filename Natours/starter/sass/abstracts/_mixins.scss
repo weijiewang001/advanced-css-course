@@ -1,0 +1,13 @@
+// 清除浮动元素带来的影响
+
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    // clear float left and float right.
+    clear: both;
+  }
+}
+
+
+// .row::after {

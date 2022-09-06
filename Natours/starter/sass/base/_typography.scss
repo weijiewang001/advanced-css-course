@@ -1,0 +1,81 @@
+body{
+  font-family: "Lato", sans-serif;
+  font-weight: 400px;
+  /* font-size: 16px; */
+  line-height: 1.7;
+  color: $color-grey-dark;
+  padding: 3rem;
+}
+
+.heading-primary {
+  color: $color-white;
+  text-transform: uppercase;
+
+  /* 隐藏元素的背景 */
+  /* 防止动画中的元素抖动 */
+  backface-visibility: hidden;
+
+  margin-bottom: 6rem;
+
+
+
+  &--main{
+    /* block可以占据他们这一行的所有width */
+    display:block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;;
+  
+    animation-name: moveInLeft;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+  
+  
+    /* 使动画播放3次 */
+    /* animation-iteration-count: 3; */
+    /* 时间延迟 */
+    /* animation-delay: 3s; */
+  }
+  
+  &--sub{
+    display: block;
+    font-size: 2rem;
+    font-weight: 700px;
+    letter-spacing: 1.75rem;
+    animation: moveInRight 1s ease-out;
+  }
+}
+
+
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  // 从左到右的渐变
+  background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+  // 修建背景图片，只保留文字部分
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: .2rem;
+  transition: all .2s;
+
+  &:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: .5rem 1rem 2rem rgba($color: $color-black, $alpha: .2);
+  }
+}
+
+.heading-tertiary {
+  font-size: $default-font-size;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-size: $default-font-size;
+
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}

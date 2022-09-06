@@ -1,0 +1,17 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html{
+  // This defines what 1rem is 
+  /* 用户默认的字体一般是16px 为了使root font-size是10px的效果 用10/16得到62.5% 这样root font-size就是10px */
+  font-size: 62.5%;
+}
+
+body{
+  box-sizing: border-box;
+}
