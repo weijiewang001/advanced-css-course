@@ -31,8 +31,21 @@
   &--white{
     background-color: $color-white;
     color:$color-grey-dark;
+
+    &::after{
+      background-color: $color-white;
+    }
   }
-  
+
+  &--green{
+    background-color: $color-primary;
+    color:$color-white;
+
+    &::after{
+      background-color: $color-primary;
+    }
+  }
+
   &::after {
     content: "";
     display: inline-block;
@@ -46,9 +59,7 @@
     transition: all .4s;
   }
   
-  &--white::after{
-    background-color: $color-white;
-  }
+  
   
   &--animated{
     animation: moveInBottom .5s ease-out .75s;
