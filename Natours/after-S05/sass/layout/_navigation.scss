@@ -28,6 +28,7 @@
         z-index: 1000;
         transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
 
+        // 把nav按钮的圆圈放大，直到覆盖整个背景
         //transform: scale(80);
     }
 
